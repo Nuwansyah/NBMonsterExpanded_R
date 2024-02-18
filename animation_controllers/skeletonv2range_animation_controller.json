@@ -1,0 +1,142 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.skeletonv2range" : {
+			"initial_state" : "idle",
+			"states" : {
+				"idle" :  {
+					"animations": ["idle"],
+					"transitions" : [
+						{"walk": "query.ground_speed >= 0.5 && !query.has_target" },
+						{"walkwater": "query.ground_speed >= 0.2 && !query.has_target && query.is_in_water"},
+						{"chase" : "query.ground_speed >= 0.5 && query.has_target && query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword')"},
+						{"rangeattack" : "query.has_target && query.ground_speed < 0.5 && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')" },
+						{"rangeattack" : "query.has_target && query.ground_speed >= 0.5 && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')" },
+						{"chasewater": "query.ground_speed >= 0.2 && query.has_target && query.is_in_water  && query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword')"},
+						{"meleestunned": "query.is_stunned && !query.has_target"}
+					],
+					"blend_transition":0.3
+				},
+				"chase" :  {
+					"animations": ["walk"],
+					"transitions" : [
+						{"idle": "query.ground_speed <  0.5 && !query.has_target" },
+						{"meleeattack" : "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.is_delayed_attacking"},
+						{"chasewater": "query.ground_speed >= 0.2 && query.has_target && query.is_in_water && query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword')"},
+						{"meleestunned": "query.is_stunned"},
+						{"rangeattack" : "query.has_target && query.ground_speed < 0.5  && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "},
+						{"rangemoved" : "query.has_target && query.ground_speed >= 0.5 && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "}
+					],
+					"blend_transition":0.3
+				},
+				"chasewater" : {
+					"animations": [ "walkwater" ],
+					"transitions" : [
+						{"idle" : "query.ground_speed < 0.2 && !query.is_in_water "},
+						{"meleeattack" : "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.is_delayed_attacking"},
+						{"rangeattack" : "query.has_target && query.ground_speed < 0.5  && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "},
+						{"rangemoved" : "query.has_target && query.ground_speed >= 0.5 && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "},
+						{"meleestunned": "query.is_stunned"}
+					],
+					"blend_transition":0.2
+				},
+				"walk" : {
+					"animations": [ "walk" ],
+					"transitions" : [
+						{"idle" : "query.ground_speed < 0.5 && !query.has_target"},
+						{"chase" : "query.ground_speed >= 0.5 && query.has_target && query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword')"},
+						{"meleeattack" : "query.has_target && query.is_delayed_attacking"},
+						{"rangeattack" : "query.has_target && query.ground_speed < 0.5  && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "},
+						{"rangemoved" : "query.has_target && query.ground_speed >= 0.5 && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "},
+						{"meleestunned": "query.is_stunned"}
+					],
+					"blend_transition":0.2
+				},
+				"walkwater" : {
+					"animations": [ "walkwater" ],
+					"transitions" : [
+						{"meleeattack" : "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.is_delayed_attacking"},
+						{"idle" : "query.ground_speed < 0.2 && !query.has_target "},
+						{"rangeattack" : "query.has_target && query.facing_target_to_range_attack && query.ground_speed < 0.5 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "},
+						
+						{"meleestunned": "query.is_stunned"}
+					],
+					"blend_transition":0.2
+				},
+				"rangemoved" : {
+					"animations": [ "rangeattackmove" ],
+					"transitions" : [
+						{"rangeattack" : "query.has_target && query.facing_target_to_range_attack && query.ground_speed < 0.5 && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "},
+						{"rangestunned": "query.is_stunned"},
+						{"meleeattack" : "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.is_delayed_attacking"}
+					],
+					"blend_transition":0.3
+				},
+				"rangeattack" : {
+					"animations": [ "rangeattack" ],
+					"transitions" : [
+						{"idle" : "query.ground_speed < 0.5 && !query.has_target"},
+						{"rangemoved" : "query.has_target && query.ground_speed >= 0.5 && query.facing_target_to_range_attack && query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')  "},
+						{"chase" : "query.ground_speed >= 0.5 && query.has_target && query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword')"},
+						{"rangestunned": "query.is_stunned"},
+						{"meleeattack" : "query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword') && query.is_delayed_attacking"}
+					],
+					"blend_transition":0.3
+				},
+				"rangestunned": {
+					"animations": [
+						{"rangeattackstun1": "variable.animation.rangestunned == 1"},
+						{"rangeattackstun2": "variable.animation.rangestunned == 2"},
+						{"rangeattackstun3": "variable.animation.rangestunned == 3"}
+					],
+					"on_entry": ["variable.animation.rangestunned = math.random_integer(1, 3);"],
+                    "transitions":[
+                        {"rangeattack": "!query.is_stunned"}
+                    ],
+					"blend_transition":0.07
+                },
+				"meleestunned" : {
+					"animations": [ "meleeattackstun1" ],
+					"transitions" : [
+						{"chase" : "!query.is_stunned"}
+					],
+					"blend_transition":0.1
+				},
+				"meleeattack" : {
+					"animations": [
+						{"meleeattack": "variable.animation.meleeattack == 1"},
+						{"meleeattack2": "variable.animation.meleeattack == 2"},
+						{"meleeattack3": "variable.animation.meleeattack == 3"}
+					],
+					"on_entry": ["variable.animation.meleeattack = math.random_integer(1, 3);"],
+					"transitions" : [
+						{"idle" : "!query.is_delayed_attacking && query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_sword')"},
+						{"rangeattack" : "query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow')"},
+						{"rangemoved" : "query.is_item_name_any('slot.weapon.mainhand', 'minecraft:bow') && query.ground_speed >= 0.5 "},
+						{"meleestunned": "query.is_stunned"}
+					],
+					"blend_transition":0.3
+				}
+
+			}
+		},
+		"controller.animation.skeletonv2.death": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{"dead": "!q.is_alive"}
+						
+					],
+					"blend_transition": 0.0
+				},
+				"dead": {
+					"animations": ["deathrot"],
+					"transitions": [
+						{"default": "q.is_alive"}
+					]
+				}
+			}
+		}
+	}
+}

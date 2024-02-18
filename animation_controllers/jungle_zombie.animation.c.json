@@ -1,0 +1,14 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.jungle_zombie" : {
+			"initial_state" : "idle",
+			"states" : {
+				"idle" : {
+					"animations" : [ "idle" ]
+				}
+			}
+		}
+		
+	}
+}
