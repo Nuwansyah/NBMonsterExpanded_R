@@ -1,11 +1,15 @@
 {
 	"format_version" : "1.10.0",
 	"animation_controllers" : {
-		"controller.animation.mineralzombie.corpse" : {
+		"controller.animation.mineralzombie.corpse1" : {
 			"initial_state" : "deadfall",
 			"states" : {
 				"deadfall": {
-					"animations": ["dead"],
+					"animations": [
+						{"deadground": "variable.animation.mdeadfall == 1"},
+						{"deadground2": "variable.animation.mdeadfall == 2"}
+					],
+					"on_entry": ["variable.animation.mdeadfall = math.random_integer(1, 2);"],
 					"blend_transition":0.1,
 					"blend_via_shortest_path": true
                 }
