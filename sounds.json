@@ -115,13 +115,28 @@
 				"pitch": [0.8, 1.2],
 				"volume": 1
 			},
-			"nba:zombie_warrior": {
+			"nba:zombie_giant": {
 				"events": {
-					"ambient": "mob.zombie.say",
-					"death": "mob.zombie.death",
-					"hurt": "mob.zombie.hurt",
+					"ambient": {
+						
+						"pitch": 0.6,
+						"sound": "mob.zombie.say",
+						"volume": 0.85
+					},
+					"death": {
+						
+						"pitch": 0.6,
+						"sound": "mob.zombie.death",
+						"volume": 0.85
+					},
+					"hurt": {
+						
+						"pitch": 0.6,
+						"sound": "mob.zombie.hurt",
+						"volume": 0.85
+					},
 					"step": {
-						"pitch": 1,
+						"pitch": 0.6,
 						"sound": "mob.zombie.step",
 						"volume": 0.45
 					}

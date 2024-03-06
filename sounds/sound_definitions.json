@@ -1,7 +1,7 @@
 {
     "format_version" : "1.14.0",
     "sound_definitions":{
-        "mob.zombiewarrior.roar" : {
+        "mob.zombiegiant.roar" : {
             "category" : "hostile",
             "max_distance" : 24.0,
             "sounds" : [
@@ -9,21 +9,21 @@
                     "is3D" : true,
                     "name" : "sounds/swordslash",
                     "pitch" : 0.8,
-                    "volume" : 0.03,
+                    "volume" : 0.5,
                     "weight" : 3
                 },
                 {
                     "is3D" : false,
                     "name" : "sounds/swordslash",
                     "pitch" : 1,
-                    "volume" : 0.03,
+                    "volume" : 0.5,
                     "weight" : 3
                 },
                 {
                     "is3D" : false,
                     "name" : "sounds/swordslash",
                     "pitch" : 0.5,
-                    "volume" : 0.03,
+                    "volume" : 0.5,
                     "weight" : 3
                 }
             ]
