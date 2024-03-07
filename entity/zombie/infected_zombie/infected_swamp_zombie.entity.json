@@ -12,7 +12,7 @@
 			},
 			"hide_armor": false,
 			"geometry": {
-				"default": "geometry.zombiev2"
+				"default": "geometry.zombie.swamo.v2"
 			},
 			"spawn_egg": {
 				"base_color": "#2a5520",

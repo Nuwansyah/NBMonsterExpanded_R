@@ -1035,11 +1035,12 @@
 				}
 			},
 			"particle_effects": {
-				"1.25": {
+				"1.4167": {
 					"effect": "green_smoke",
 					"locator": "locator"
 				}
-			}
+			},
+			"timeline": {}
 		},
 		"animation.zombie.giant.dead": {
 			"loop": "hold_on_last_frame",
