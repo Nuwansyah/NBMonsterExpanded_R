@@ -24,8 +24,8 @@
 			},
 			"animations": {
 				"controller" : "controller.animation.skeletonv2.corpse",
-				"dead": "animation.skeletonv2.deathfall",
-				"deadfall": "animation.skeletonv2.deathfall",
+				"dead": "animation.skeletonv2.dead",
+				"deadfall": "animation.skeletonv2.deadfalling",
 				"deadground": "animation.skeletonv2.deathground1",
 				"deadground2": "animation.skeletonv2.deathground2",
 				"deadground3": "animation.skeletonv2.deathground3"
