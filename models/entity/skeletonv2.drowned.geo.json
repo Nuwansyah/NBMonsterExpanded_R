@@ -214,7 +214,7 @@
 				{
 					"name": "rightItem",
 					"parent": "rightArm",
-					"pivot": [-6, 15, 1]
+					"pivot": [-5, 15, 1]
 				},
 				{
 					"name": "leftArm",

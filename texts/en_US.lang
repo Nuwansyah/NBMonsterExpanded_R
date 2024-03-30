@@ -26,13 +26,13 @@ entity.nba:mesa_spider.name=Mesa Spider
 entity.nba:swamp_spider.name=Swamp Spider
 item.spawn_egg.entity.nba:jungle_spider.name=Spawn Jungle Spider
 item.spawn_egg.entity.nba:snow_spider.name=Spawn Snow Spider
-item.spawn_egg.entity.nba:desert_spider.name=Spawn desert Spider
+item.spawn_egg.entity.nba:desert_spider.name=Spawn Desert Spider
 item.spawn_egg.entity.nba:swamp_spider.name=Spawn Swamp Spider
 item.spawn_egg.entity.nba:mesa_spider.name=Spawn Mesa Spider
 
 item.spawn_egg.entity.nba:jungle_creeper.name=Spawn Jungle Creeper
 item.spawn_egg.entity.nba:snow_creeper.name=Spawn Snow Creeper
-item.spawn_egg.entity.nba:desert_creeper.name=Spawn desert Creeper
+item.spawn_egg.entity.nba:desert_creeper.name=Spawn Desert Creeper
 item.spawn_egg.entity.nba:mesa_creeper.name=Spawn Mesa Creeper
 entity.nba:jungle_creeper.name=Jungle Creeper
 entity.nba:snow_creeper.name=Snow Creeper
@@ -129,6 +129,9 @@ item.spawn_egg.entity.nba:evil_ghost.name=Spawn Evil Ghost
 
 entity.nba:deepslate_spider.name=Deepslate Spider
 item.spawn_egg.entity.nba:deepslate_spider.name=Spawn Deepslate Spider
+
+entity.nba:plain_spider.name=Plain Spider
+item.spawn_egg.entity.nba:plain_spider.name=Spawn Plain Spider
 
 entity.nba:darkness_stalker.name=Darkness Stalker
 item.spawn_egg.entity.nba:darkness_stalker.name=Spawn Darkness Stalker

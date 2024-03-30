@@ -208,7 +208,7 @@
 				{
 					"name": "rightItem",
 					"parent": "rightArm",
-					"pivot": [-6, 15, 0]
+					"pivot": [-5.5, 15, 1]
 				},
 				{
 					"name": "leftArm",
@@ -232,7 +232,7 @@
 				{
 					"name": "leftItem",
 					"parent": "leftArm",
-					"pivot": [6, 15, 0]
+					"pivot": [6, 15, 1]
 				},
 				{
 					"name": "waist",

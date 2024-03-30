@@ -389,6 +389,23 @@
 				"pitch": [0.8, 1.2],
 				"volume": 1
 			},
+			"nba:plain_spider": {
+				"events": {
+					"ambient": "mob.spider.say",
+					"death": "mob.spider.death",
+					"hurt": {
+						"sound": "mob.spider.say",
+						"volume": 0.7
+					},
+					"step": {
+						"pitch": 1,
+						"sound": "mob.spider.step",
+						"volume": 1
+					}
+				},
+				"pitch": [0.8, 1.2],
+				"volume": 1
+			},
 			"nba:snow_spider": {
 				"events": {
 					"ambient": "mob.spider.say",
