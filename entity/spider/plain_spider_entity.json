@@ -26,12 +26,12 @@
 
 			
 	  	"scripts": {
-		"animate": [
-		  "look_at_target",
-		  "move2",
-		  "stand",
-		  "controllerdead"
-		]
+			"animate": [
+		 		"look_at_target",
+		  		"move2",
+		  		"stand",
+		  		"controllerdead"
+			]
 	  	},
 		"animations": {
 		

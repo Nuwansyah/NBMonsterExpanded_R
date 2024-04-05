@@ -1,6 +1,6 @@
 {
 	"format_version": "1.8.0",
-	"geometry.sculkspider": {
+	"geometry.sculkspider.mini": {
 		"texturewidth": 128,
 		"textureheight": 96,
 		"visible_bounds_width": 5,
@@ -189,8 +189,7 @@
 				"cubes": [
 					{"origin": [-5, 5.87039, 3.31436], "size": [10, 8, 12], "uv": [0, 12]},
 					{"origin": [-3, 4.77039, 15.11436], "size": [2, 2.4, 1.4], "uv": [31, 1]},
-					{"origin": [1, 4.77039, 15.11436], "size": [2, 2.4, 1.4], "uv": [35, 1], "mirror": true},
-					{"origin": [-5.4, 2.77039, 3.61436], "size": [10.8, 11.5, 12.4], "uv": [0, 32]}
+					{"origin": [1, 4.77039, 15.11436], "size": [2, 2.4, 1.4], "uv": [35, 1], "mirror": true}
 				],
 				"locators": {
 					"mid": [0, 11.87039, 16.31436],
@@ -202,28 +201,19 @@
 				"name": "bone2",
 				"parent": "body1",
 				"pivot": [0.8, 15.27039, 7.91436],
-				"rotation": [-72.5, 0, 0],
-				"cubes": [
-					{"origin": [-4.2, 17.77039, 14.41436], "size": [10.7, 7.2, 0], "uv": [90, 89]}
-				]
+				"rotation": [-72.5, 0, 0]
 			},
 			{
 				"name": "bone11",
 				"parent": "bone2",
 				"pivot": [-4.65, 18.57039, 10.01436],
-				"rotation": [20, -17.5, -85],
-				"cubes": [
-					{"origin": [-10, 14.97039, 11.11436], "size": [10.7, 7.2, 0], "uv": [98, 89]}
-				]
+				"rotation": [20, -17.5, -85]
 			},
 			{
 				"name": "bone12",
 				"parent": "bone2",
 				"pivot": [4.65, 18.57039, 10.01436],
-				"rotation": [20, 17.5, 85],
-				"cubes": [
-					{"origin": [-0.7, 14.97039, 11.11436], "size": [10.7, 7.2, 0], "uv": [98, 89], "mirror": true}
-				]
+				"rotation": [20, 17.5, 85]
 			}
 		]
 	}

@@ -797,6 +797,7 @@
 				"pitch": [0.8, 1.2],
 				"volume": 1
 			},
+			
 			"nba:infected_zombie": {
 				"events": {
 					"ambient": {
@@ -1005,7 +1006,7 @@
 				"pitch": [0.8, 1.2],
 				"volume": 1
 			},
-			"nba:sculk_spider_summon": {
+			"nba:sculk_spider_small": {
 				"events": {
 					"ambient": {
 						"pitch": 1.2,
