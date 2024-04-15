@@ -2,21 +2,20 @@
 	"format_version": "1.10.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "nba:mesa_creeper",
+			"identifier": "nba:sculk_creeper_corpse",
 			"min_engine_version": "1.8.0",
 			"materials": {
 				"default": "spider"
 			},
 			"textures": {
-				"default": "textures/entity/creeper/mesa_creeper/creeper",
-				"default2": "textures/entity/creeper/mesa_creeper/creepera"
+				"default": "textures/entity/creeper/sculk_creeper/creeper1"
 			},
 			"geometry": {
-				"default": "geometry.jungle.creeper"
+				"default": "geometry.sculkcreeper"
 			},
 			"spawn_egg": {
-				"base_color": "#e06a1c",
-				"overlay_color": "#df6513"
+				"base_color": "#302f29",
+				"overlay_color": "#3793a3"
 			},
 			"scripts": {
 				"pre_animation": [
@@ -27,27 +26,16 @@
 					"variable.flash = Math.mod(Math.Round(query.swell_amount * 10.0), 2.0);"
 				],
 				"animate":[
-					"look_at_target",
-					"creeper_legs",
-					"creeper_swelling",
-					"general",
-					"death"
+					"general"
 				]
 			},
 			"animations": {
-				"general": "controller.animation.creeperv2",
-				"death" : "controller.animation.creeperv2.death",
-				"idle": "animation.jungle.creeper.idlev2",
-				"stunned": "animation.jungle.creeper.stunned",
-				"look_at_target": "animation.common.look_at_target",
-				"creeper_legs": "animation.stone_creeper.legs",
-				"creeper_swelling": "animation.stone_creeper.swelling",
+				"general": "controller.animation.creeper.corpse",
 				"dead" : "animation.jungle.creeper.dead",
-				"dead2" : "animation.jungle.creeper.dead2",
-				"deathrot" : "animation.jungle.creeper.death_rot"
+				"dead2" : "animation.jungle.creeper.dead2"
 
 			},
-			"render_controllers": ["controller.render.twovariant"]
+			"render_controllers": ["controller.render.onevariant"]
 		}
 	}
 }

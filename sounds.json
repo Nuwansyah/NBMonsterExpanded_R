@@ -1006,7 +1006,7 @@
 				"pitch": [0.8, 1.2],
 				"volume": 1
 			},
-			"nba:sculk_spider_small": {
+			"nba:sculk_spider_mini": {
 				"events": {
 					"ambient": {
 						"pitch": 1.2,

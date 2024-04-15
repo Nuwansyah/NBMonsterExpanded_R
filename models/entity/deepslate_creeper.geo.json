@@ -12,12 +12,29 @@
 			},
 			"bones": [
 				{
-					"name": "body",
+					"name": "root",
 					"pivot": [0, 0, 0]
 				},
 				{
+					"name": "spine",
+					"parent": "root",
+					"pivot": [0, 6, 0]
+				},
+				{
+					"name": "head",
+					"parent": "spine",
+					"pivot": [0, 18, 0],
+					"cubes": [
+						{"origin": [-4, 18, -4], "size": [8, 8, 8], "uv": [0, 0]},
+						{"origin": [-3.2, 22.6, 0.5], "size": [4, 4, 4], "uv": [21, 0]},
+						{"origin": [0.8, 22.6, -3.5], "size": [4, 4, 4], "uv": [21, 0]},
+						{"origin": [0.8, 17.6, 0.5], "size": [4, 4, 4], "uv": [21, 0]},
+						{"origin": [-4.4, 20.6, -3.5], "size": [4, 4, 4], "uv": [21, 0]}
+					]
+				},
+				{
 					"name": "body2",
-					"parent": "body",
+					"parent": "spine",
 					"pivot": [0, 0, 0],
 					"cubes": [
 						{"origin": [-4, 6, -2], "size": [8, 12, 4], "uv": [16, 16]},
@@ -30,20 +47,13 @@
 					]
 				},
 				{
-					"name": "head",
-					"parent": "body2",
-					"pivot": [0, 18, 0],
-					"cubes": [
-						{"origin": [-4, 18, -4], "size": [8, 8, 8], "uv": [0, 0]},
-						{"origin": [-3.2, 22.6, 0.5], "size": [4, 4, 4], "uv": [21, 0]},
-						{"origin": [0.8, 22.6, -3.5], "size": [4, 4, 4], "uv": [21, 0]},
-						{"origin": [0.8, 17.6, 0.5], "size": [4, 4, 4], "uv": [21, 0]},
-						{"origin": [-4.4, 20.6, -3.5], "size": [4, 4, 4], "uv": [21, 0]}
-					]
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 6, 0]
 				},
 				{
 					"name": "leg0",
-					"parent": "body",
+					"parent": "waist",
 					"pivot": [-2, 6, 4],
 					"cubes": [
 						{"origin": [-4, 0, 2], "size": [4, 6, 4], "uv": [0, 16]}
@@ -51,7 +61,7 @@
 				},
 				{
 					"name": "leg1",
-					"parent": "body",
+					"parent": "waist",
 					"pivot": [2, 6, 4],
 					"cubes": [
 						{"origin": [0, 0, 2], "size": [4, 6, 4], "uv": [0, 16]}
@@ -59,7 +69,7 @@
 				},
 				{
 					"name": "leg2",
-					"parent": "body",
+					"parent": "waist",
 					"pivot": [-2, 6, -4],
 					"cubes": [
 						{"origin": [-4, 0, -6], "size": [4, 6, 4], "uv": [0, 16]}
@@ -67,7 +77,7 @@
 				},
 				{
 					"name": "leg3",
-					"parent": "body",
+					"parent": "waist",
 					"pivot": [2, 6, -4],
 					"cubes": [
 						{"origin": [0, 0, -6], "size": [4, 6, 4], "uv": [0, 16]}
